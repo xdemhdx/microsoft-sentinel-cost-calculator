@@ -1,0 +1,2395 @@
+[
+  {
+    "id": "microsoft-microsoft-defender-xdr-incidents-alerts",
+    "vendor": "Microsoft",
+    "product": "Microsoft Defender XDR - Incidents & Alerts",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Unified incidents and alerts from Defender products."
+  },
+  {
+    "id": "microsoft-defender-for-endpoint-advanced-hunting-tables",
+    "vendor": "Microsoft",
+    "product": "Defender for Endpoint - Advanced Hunting Tables",
+    "category": "Microsoft Security",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Raw telemetry tables for deep hunting.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-defender-for-identity",
+    "vendor": "Microsoft",
+    "product": "Microsoft Defender for Identity",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Identity threat detections and lateral movement telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-defender-for-office-365",
+    "vendor": "Microsoft",
+    "product": "Microsoft Defender for Office 365",
+    "category": "Microsoft Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Email threat and policy telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-defender-for-cloud-apps",
+    "vendor": "Microsoft",
+    "product": "Microsoft Defender for Cloud Apps",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.3,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "CASB activity and governance alerts.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-sentinel-ueba",
+    "vendor": "Microsoft",
+    "product": "Microsoft Sentinel UEBA",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Behavior analytics and anomaly scoring."
+  },
+  {
+    "id": "microsoft-microsoft-sentinel-internal-auditing",
+    "vendor": "Microsoft",
+    "product": "Microsoft Sentinel Internal Auditing",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Sentinel auditing and platform health events."
+  },
+  {
+    "id": "microsoft-custom-mde-logging-data-collection-rules",
+    "vendor": "Microsoft",
+    "product": "Custom MDE Logging (Data Collection Rules)",
+    "category": "Microsoft Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Custom MDE collection rules.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-purview-dlp-information-protection",
+    "vendor": "Microsoft",
+    "product": "Microsoft Purview DLP & Information Protection",
+    "category": "Microsoft Security",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "DLP and information protection events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-entra-id",
+    "vendor": "Microsoft",
+    "product": "Microsoft Entra ID",
+    "category": "Identity & Access",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Microsoft Entra ID security and audit telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "okta-okta-workforce-identity",
+    "vendor": "Okta",
+    "product": "Okta Workforce Identity",
+    "category": "Identity & Access",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Okta Workforce Identity security and audit telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "ping-identity-ping-identity",
+    "vendor": "Ping Identity",
+    "product": "Ping Identity",
+    "category": "Identity & Access",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Ping Identity security and audit telemetry."
+  },
+  {
+    "id": "cyberark-cyberark-privileged-access",
+    "vendor": "CyberArk",
+    "product": "CyberArk Privileged Access",
+    "category": "Identity & Access",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "CyberArk Privileged Access security and audit telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "1password-1password",
+    "vendor": "1Password",
+    "product": "1Password",
+    "category": "Identity & Access",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "1Password security and audit telemetry."
+  },
+  {
+    "id": "one-identity-one-identity-safeguard",
+    "vendor": "One Identity",
+    "product": "One Identity Safeguard",
+    "category": "Identity & Access",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "One Identity Safeguard security and audit telemetry."
+  },
+  {
+    "id": "delinea-delinea-secret-server-thycotic",
+    "vendor": "Delinea",
+    "product": "Delinea Secret Server (Thycotic)",
+    "category": "Identity & Access",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Delinea Secret Server (Thycotic) security and audit telemetry."
+  },
+  {
+    "id": "beyondtrust-beyondtrust",
+    "vendor": "BeyondTrust",
+    "product": "BeyondTrust",
+    "category": "Identity & Access",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "BeyondTrust security and audit telemetry."
+  },
+  {
+    "id": "sailpoint-sailpoint-identitynow",
+    "vendor": "SailPoint",
+    "product": "SailPoint IdentityNow",
+    "category": "Identity & Access",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "SailPoint IdentityNow security and audit telemetry."
+  },
+  {
+    "id": "cisco-cisco-duo",
+    "vendor": "Cisco",
+    "product": "Cisco Duo",
+    "category": "Identity & Access",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Cisco Duo security and audit telemetry."
+  },
+  {
+    "id": "auth0-okta-auth0-customer-identity",
+    "vendor": "Auth0 (Okta)",
+    "product": "Auth0 Customer Identity",
+    "category": "Identity & Access",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Auth0 Customer Identity security and audit telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "forgerock-forgerock-identity-platform",
+    "vendor": "ForgeRock",
+    "product": "ForgeRock Identity Platform",
+    "category": "Identity & Access",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "ForgeRock Identity Platform security and audit telemetry."
+  },
+  {
+    "id": "google-gcp-iam",
+    "vendor": "Google",
+    "product": "GCP IAM",
+    "category": "Identity & Access",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "GCP IAM security and audit telemetry."
+  },
+  {
+    "id": "bitwarden-bitwarden-password-manager",
+    "vendor": "Bitwarden",
+    "product": "Bitwarden Password Manager",
+    "category": "Identity & Access",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Bitwarden Password Manager security and audit telemetry."
+  },
+  {
+    "id": "crowdstrike-crowdstrike-falcon",
+    "vendor": "CrowdStrike",
+    "product": "CrowdStrike Falcon",
+    "category": "Endpoint Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "CrowdStrike Falcon endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "sentinelone-sentinelone-singularity",
+    "vendor": "SentinelOne",
+    "product": "SentinelOne Singularity",
+    "category": "Endpoint Security",
+    "base_ingestion": 1.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "SentinelOne Singularity endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "vmware-vmware-carbon-black",
+    "vendor": "VMware",
+    "product": "VMware Carbon Black",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "VMware Carbon Black endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cisco-cisco-secure-endpoint-amp",
+    "vendor": "Cisco",
+    "product": "Cisco Secure Endpoint (AMP)",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.8,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Cisco Secure Endpoint (AMP) endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "sophos-sophos-endpoint-protection",
+    "vendor": "Sophos",
+    "product": "Sophos Endpoint Protection",
+    "category": "Endpoint Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Sophos Endpoint Protection endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "sophos-sophos-xdr",
+    "vendor": "Sophos",
+    "product": "Sophos XDR",
+    "category": "Endpoint Security",
+    "base_ingestion": 1.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Sophos XDR endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "trend-micro-trend-micro-apex-one",
+    "vendor": "Trend Micro",
+    "product": "Trend Micro Apex One",
+    "category": "Endpoint Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Trend Micro Apex One endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "trend-micro-trend-micro-deep-security",
+    "vendor": "Trend Micro",
+    "product": "Trend Micro Deep Security",
+    "category": "Endpoint Security",
+    "base_ingestion": 1.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Trend Micro Deep Security endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "trend-micro-trend-micro-vision-one",
+    "vendor": "Trend Micro",
+    "product": "Trend Micro Vision One",
+    "category": "Endpoint Security",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Trend Micro Vision One endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "trellix-trellix-edr-mcafee-mvision",
+    "vendor": "Trellix",
+    "product": "Trellix EDR (McAfee MVISION)",
+    "category": "Endpoint Security",
+    "base_ingestion": 1.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Trellix EDR (McAfee MVISION) endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "broadcom-symantec-endpoint-protection-broadcom",
+    "vendor": "Broadcom",
+    "product": "Symantec Endpoint Protection (Broadcom)",
+    "category": "Endpoint Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Symantec Endpoint Protection (Broadcom) endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "broadcom-symantec-dlp-broadcom",
+    "vendor": "Broadcom",
+    "product": "Symantec DLP (Broadcom)",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Symantec DLP (Broadcom) endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "eset-eset-protect",
+    "vendor": "ESET",
+    "product": "ESET PROTECT",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.8,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "ESET PROTECT endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "kaspersky-kaspersky-security-center",
+    "vendor": "Kaspersky",
+    "product": "Kaspersky Security Center",
+    "category": "Endpoint Security",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Kaspersky Security Center endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "withsecure-withsecure-elements",
+    "vendor": "WithSecure",
+    "product": "WithSecure Elements",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.8,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "WithSecure Elements endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "morphisec-morphisec",
+    "vendor": "Morphisec",
+    "product": "Morphisec",
+    "category": "Endpoint Security",
+    "base_ingestion": 0.3,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Morphisec endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "palo-alto-networks-palo-alto-cortex-xdr",
+    "vendor": "Palo Alto Networks",
+    "product": "Palo Alto Cortex XDR",
+    "category": "Endpoint Security",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Palo Alto Cortex XDR endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-windows-forwarded-events",
+    "vendor": "Microsoft",
+    "product": "Windows Forwarded Events",
+    "category": "Endpoint Security",
+    "base_ingestion": 5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Windows Forwarded Events endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "elastic-elastic-agent",
+    "vendor": "Elastic",
+    "product": "Elastic Agent",
+    "category": "Endpoint Security",
+    "base_ingestion": 5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Elastic Agent endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "elastic-elastic-agent-unified",
+    "vendor": "Elastic",
+    "product": "Elastic Agent (Unified)",
+    "category": "Endpoint Security",
+    "base_ingestion": 5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Elastic Agent (Unified) endpoint and detection telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "fortinet-fortinet-fortigate",
+    "vendor": "Fortinet",
+    "product": "Fortinet FortiGate",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Fortinet FortiGate network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "palo-alto-networks-palo-alto-networks-firewall",
+    "vendor": "Palo Alto Networks",
+    "product": "Palo Alto Networks Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Palo Alto Networks Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cisco-cisco-asa-firepower-ftd",
+    "vendor": "Cisco",
+    "product": "Cisco ASA / Firepower (FTD)",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Cisco ASA / Firepower (FTD) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "check-point-check-point-firewall",
+    "vendor": "Check Point",
+    "product": "Check Point Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Check Point Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "zscaler-zscaler-internet-access-zia",
+    "vendor": "Zscaler",
+    "product": "Zscaler Internet Access (ZIA)",
+    "category": "Network & Firewall",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Zscaler Internet Access (ZIA) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "zscaler-zscaler-private-access-zpa",
+    "vendor": "Zscaler",
+    "product": "Zscaler Private Access (ZPA)",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Zscaler Private Access (ZPA) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cloudflare-cloudflare",
+    "vendor": "Cloudflare",
+    "product": "Cloudflare",
+    "category": "Network & Firewall",
+    "base_ingestion": 10,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Cloudflare network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cisco-cisco-umbrella",
+    "vendor": "Cisco",
+    "product": "Cisco Umbrella",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Cisco Umbrella network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-firewall",
+    "vendor": "Microsoft",
+    "product": "Azure Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Azure Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "f5-f5-big-ip",
+    "vendor": "F5",
+    "product": "F5 BIG-IP",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "F5 BIG-IP network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "darktrace-darktrace",
+    "vendor": "Darktrace",
+    "product": "Darktrace",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Darktrace network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "juniper-juniper-srx",
+    "vendor": "Juniper",
+    "product": "Juniper SRX",
+    "category": "Network & Firewall",
+    "base_ingestion": 6,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Juniper SRX network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "sonicwall-sonicwall-firewall",
+    "vendor": "SonicWall",
+    "product": "SonicWall Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "SonicWall Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "watchguard-watchguard-firebox",
+    "vendor": "WatchGuard",
+    "product": "WatchGuard Firebox",
+    "category": "Network & Firewall",
+    "base_ingestion": 4,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "WatchGuard Firebox network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "barracuda-barracuda-waf",
+    "vendor": "Barracuda",
+    "product": "Barracuda WAF",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Barracuda WAF network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "citrix-citrix-web-app-firewall",
+    "vendor": "Citrix",
+    "product": "Citrix Web App Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Citrix Web App Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "imperva-imperva-waf-gateway",
+    "vendor": "Imperva",
+    "product": "Imperva WAF Gateway",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Imperva WAF Gateway network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "akamai-akamai-security-events",
+    "vendor": "Akamai",
+    "product": "Akamai Security Events",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Akamai Security Events network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "hpe-aruba-aruba-clearpass",
+    "vendor": "HPE Aruba",
+    "product": "Aruba ClearPass",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Aruba ClearPass network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cisco-cisco-meraki",
+    "vendor": "Cisco",
+    "product": "Cisco Meraki",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Cisco Meraki network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "infoblox-infoblox-bloxone-nios",
+    "vendor": "Infoblox",
+    "product": "Infoblox BloxOne / NIOS",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Infoblox BloxOne / NIOS network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "palo-alto-networks-palo-alto-cloud-ngfw-azure",
+    "vendor": "Palo Alto Networks",
+    "product": "Palo Alto Cloud NGFW (Azure)",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Palo Alto Cloud NGFW (Azure) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "netskope-netskope-casb-sse",
+    "vendor": "Netskope",
+    "product": "Netskope CASB/SSE",
+    "category": "Network & Firewall",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Netskope CASB/SSE network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "iboss-iboss-cloud-security",
+    "vendor": "iboss",
+    "product": "iboss Cloud Security",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "iboss Cloud Security network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "vmware-vmware-nsx",
+    "vendor": "VMware",
+    "product": "VMware NSX",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "VMware NSX network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "extrahop-extrahop-reveal-x",
+    "vendor": "ExtraHop",
+    "product": "ExtraHop Reveal(x)",
+    "category": "Network & Firewall",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "ExtraHop Reveal(x) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "corelight-corelight-zeek",
+    "vendor": "Corelight",
+    "product": "Corelight (Zeek)",
+    "category": "Network & Firewall",
+    "base_ingestion": 20,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Corelight (Zeek) network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-web-application-firewall",
+    "vendor": "Microsoft",
+    "product": "Azure Web Application Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Azure Web Application Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-nsg-flow-logs",
+    "vendor": "Microsoft",
+    "product": "Azure NSG Flow Logs",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Azure NSG Flow Logs network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-vnet-flow-logs",
+    "vendor": "Microsoft",
+    "product": "Azure VNet Flow Logs",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Azure VNet Flow Logs network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-ddos-protection",
+    "vendor": "Microsoft",
+    "product": "Azure DDoS Protection",
+    "category": "Network & Firewall",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Azure DDoS Protection network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "amazon-aws-network-firewall",
+    "vendor": "Amazon",
+    "product": "AWS Network Firewall",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "AWS Network Firewall network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "amazon-aws-waf",
+    "vendor": "Amazon",
+    "product": "AWS WAF",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "AWS WAF network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "amazon-aws-route-53-dns",
+    "vendor": "Amazon",
+    "product": "AWS Route 53 DNS",
+    "category": "Network & Firewall",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "AWS Route 53 DNS network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "google-gcp-cloud-ids",
+    "vendor": "Google",
+    "product": "GCP Cloud IDS",
+    "category": "Network & Firewall",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "GCP Cloud IDS network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "forescout-forescout",
+    "vendor": "Forescout",
+    "product": "Forescout",
+    "category": "Network & Firewall",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Forescout network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "gigamon-gigamon-amx",
+    "vendor": "Gigamon",
+    "product": "Gigamon AMX",
+    "category": "Network & Firewall",
+    "base_ingestion": 10,
+    "supports_scaling": true,
+    "scaling_key": "firewalls",
+    "tier_type": "smart_split",
+    "description": "Gigamon AMX network and firewall telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-activity-log",
+    "vendor": "Microsoft",
+    "product": "Azure Activity Log",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Azure Activity Log cloud control-plane and workload events."
+  },
+  {
+    "id": "microsoft-microsoft-defender-for-cloud",
+    "vendor": "Microsoft",
+    "product": "Microsoft Defender for Cloud",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Microsoft Defender for Cloud cloud control-plane and workload events."
+  },
+  {
+    "id": "amazon-aws-cloudtrail",
+    "vendor": "Amazon",
+    "product": "AWS CloudTrail",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "AWS CloudTrail cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "amazon-aws-guardduty",
+    "vendor": "Amazon",
+    "product": "AWS GuardDuty",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "AWS GuardDuty cloud control-plane and workload events."
+  },
+  {
+    "id": "amazon-aws-vpc-flow-logs",
+    "vendor": "Amazon",
+    "product": "AWS VPC Flow Logs",
+    "category": "Cloud Platforms",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "datalake",
+    "description": "AWS VPC Flow Logs cloud control-plane and workload events."
+  },
+  {
+    "id": "amazon-aws-security-hub",
+    "vendor": "Amazon",
+    "product": "AWS Security Hub",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "AWS Security Hub cloud control-plane and workload events."
+  },
+  {
+    "id": "google-google-cloud-audit-logs",
+    "vendor": "Google",
+    "product": "Google Cloud Audit Logs",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Google Cloud Audit Logs cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "google-google-security-command-center",
+    "vendor": "Google",
+    "product": "Google Security Command Center",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Google Security Command Center cloud control-plane and workload events."
+  },
+  {
+    "id": "palo-alto-networks-palo-alto-prisma-cloud",
+    "vendor": "Palo Alto Networks",
+    "product": "Palo Alto Prisma Cloud",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Palo Alto Prisma Cloud cloud control-plane and workload events."
+  },
+  {
+    "id": "oracle-oracle-cloud-infrastructure",
+    "vendor": "Oracle",
+    "product": "Oracle Cloud Infrastructure",
+    "category": "Cloud Platforms",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Oracle Cloud Infrastructure cloud control-plane and workload events."
+  },
+  {
+    "id": "alibaba-alibaba-cloud",
+    "vendor": "Alibaba",
+    "product": "Alibaba Cloud",
+    "category": "Cloud Platforms",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Alibaba Cloud cloud control-plane and workload events."
+  },
+  {
+    "id": "google-gcp-vpc-flow-logs",
+    "vendor": "Google",
+    "product": "GCP VPC Flow Logs",
+    "category": "Cloud Platforms",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "datalake",
+    "description": "GCP VPC Flow Logs cloud control-plane and workload events."
+  },
+  {
+    "id": "microsoft-azure-storage-account",
+    "vendor": "Microsoft",
+    "product": "Azure Storage Account",
+    "category": "Cloud Platforms",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Azure Storage Account cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-kubernetes-service-aks",
+    "vendor": "Microsoft",
+    "product": "Azure Kubernetes Service (AKS)",
+    "category": "Cloud Platforms",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Azure Kubernetes Service (AKS) cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "amazon-aws-cloudfront",
+    "vendor": "Amazon",
+    "product": "AWS CloudFront",
+    "category": "Cloud Platforms",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "AWS CloudFront cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "google-gcp-compute-engine",
+    "vendor": "Google",
+    "product": "GCP Compute Engine",
+    "category": "Cloud Platforms",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "GCP Compute Engine cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "google-google-kubernetes-engine-gke",
+    "vendor": "Google",
+    "product": "Google Kubernetes Engine (GKE)",
+    "category": "Cloud Platforms",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Google Kubernetes Engine (GKE) cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "check-point-check-point-cloudguard",
+    "vendor": "Check Point",
+    "product": "Check Point CloudGuard",
+    "category": "Cloud Platforms",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Check Point CloudGuard cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "wiz-wiz-cloud-security",
+    "vendor": "Wiz",
+    "product": "Wiz Cloud Security",
+    "category": "Cloud Platforms",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Wiz Cloud Security cloud control-plane and workload events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "proofpoint-proofpoint-tap",
+    "vendor": "Proofpoint",
+    "product": "Proofpoint TAP",
+    "category": "Email & Collaboration",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Proofpoint TAP email and collaboration security logs.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "mimecast-mimecast",
+    "vendor": "Mimecast",
+    "product": "Mimecast",
+    "category": "Email & Collaboration",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Mimecast email and collaboration security logs.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "abnormal-security-abnormal-security",
+    "vendor": "Abnormal Security",
+    "product": "Abnormal Security",
+    "category": "Email & Collaboration",
+    "base_ingestion": 0.3,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Abnormal Security email and collaboration security logs."
+  },
+  {
+    "id": "knowbe4-knowbe4-phisher",
+    "vendor": "KnowBe4",
+    "product": "KnowBe4 PhishER",
+    "category": "Email & Collaboration",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "KnowBe4 PhishER email and collaboration security logs."
+  },
+  {
+    "id": "cofense-cofense-triage",
+    "vendor": "Cofense",
+    "product": "Cofense Triage",
+    "category": "Email & Collaboration",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Cofense Triage email and collaboration security logs."
+  },
+  {
+    "id": "cisco-cisco-email-threat-defense",
+    "vendor": "Cisco",
+    "product": "Cisco Email Threat Defense",
+    "category": "Email & Collaboration",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Cisco Email Threat Defense email and collaboration security logs.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-devops",
+    "vendor": "Microsoft",
+    "product": "Azure DevOps",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Azure DevOps application and SaaS audit events."
+  },
+  {
+    "id": "microsoft-dynamics-365",
+    "vendor": "Microsoft",
+    "product": "Dynamics 365",
+    "category": "Applications & SaaS",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Dynamics 365 application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "salesforce-salesforce",
+    "vendor": "Salesforce",
+    "product": "Salesforce",
+    "category": "Applications & SaaS",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Salesforce application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "servicenow-servicenow",
+    "vendor": "ServiceNow",
+    "product": "ServiceNow",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "ServiceNow application and SaaS audit events."
+  },
+  {
+    "id": "workday-workday",
+    "vendor": "Workday",
+    "product": "Workday",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Workday application and SaaS audit events."
+  },
+  {
+    "id": "atlassian-atlassian-jira-confluence",
+    "vendor": "Atlassian",
+    "product": "Atlassian (Jira, Confluence)",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Atlassian (Jira, Confluence) application and SaaS audit events."
+  },
+  {
+    "id": "box-box-enterprise",
+    "vendor": "Box",
+    "product": "Box Enterprise",
+    "category": "Applications & SaaS",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Box Enterprise application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "soc-prime-soc-prime-platform",
+    "vendor": "SOC Prime",
+    "product": "SOC Prime Platform",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "SOC Prime Platform application and SaaS audit events."
+  },
+  {
+    "id": "google-google-workspace",
+    "vendor": "Google",
+    "product": "Google Workspace",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Google Workspace application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "slack-slack-enterprise-grid-audit",
+    "vendor": "Slack",
+    "product": "Slack Enterprise Grid Audit",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Slack Enterprise Grid Audit application and SaaS audit events."
+  },
+  {
+    "id": "zoom-zoom",
+    "vendor": "Zoom",
+    "product": "Zoom",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Zoom application and SaaS audit events."
+  },
+  {
+    "id": "dropbox-dropbox-business",
+    "vendor": "Dropbox",
+    "product": "Dropbox Business",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Dropbox Business application and SaaS audit events."
+  },
+  {
+    "id": "docusign-docusign",
+    "vendor": "DocuSign",
+    "product": "DocuSign",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "DocuSign application and SaaS audit events."
+  },
+  {
+    "id": "gitlab-gitlab",
+    "vendor": "GitLab",
+    "product": "GitLab",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "GitLab application and SaaS audit events."
+  },
+  {
+    "id": "sap-sap",
+    "vendor": "SAP",
+    "product": "SAP",
+    "category": "Applications & SaaS",
+    "base_ingestion": 1,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "SAP application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "pathlock-pathlock-for-sap",
+    "vendor": "Pathlock",
+    "product": "Pathlock for SAP",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Pathlock for SAP application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "snowflake-snowflake",
+    "vendor": "Snowflake",
+    "product": "Snowflake",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Snowflake application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "mongodb-mongodb-atlas",
+    "vendor": "MongoDB",
+    "product": "MongoDB Atlas",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "MongoDB Atlas application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-office-365-management-activity",
+    "vendor": "Microsoft",
+    "product": "Office 365 Management Activity",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Office 365 Management Activity application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-microsoft-365-copilot",
+    "vendor": "Microsoft",
+    "product": "Microsoft 365 Copilot",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Microsoft 365 Copilot application and SaaS audit events."
+  },
+  {
+    "id": "atlassian-atlassian-confluence-audit",
+    "vendor": "Atlassian",
+    "product": "Atlassian Confluence Audit",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Atlassian Confluence Audit application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "atlassian-atlassian-jira-audit",
+    "vendor": "Atlassian",
+    "product": "Atlassian Jira Audit",
+    "category": "Applications & SaaS",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Atlassian Jira Audit application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "google-google-workspace-activity",
+    "vendor": "Google",
+    "product": "Google Workspace Activity",
+    "category": "Applications & SaaS",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Google Workspace Activity application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "contrast-security-contrast-security-adr",
+    "vendor": "Contrast Security",
+    "product": "Contrast Security ADR",
+    "category": "Applications & SaaS",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Contrast Security ADR application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "dynatrace-dynatrace-security",
+    "vendor": "Dynatrace",
+    "product": "Dynatrace Security",
+    "category": "Applications & SaaS",
+    "base_ingestion": 3,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Dynatrace Security application and SaaS audit events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-on-prem-windows-security-events",
+    "vendor": "Microsoft",
+    "product": "On-Prem Windows Security Events",
+    "category": "Infrastructure",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "On-Prem Windows Security Events infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-windows-security-events-from-azure-vms-via-ama-agent",
+    "vendor": "Microsoft",
+    "product": "Windows Security Events from Azure VMs via AMA Agent",
+    "category": "Infrastructure",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Windows Security Events from Azure VMs via AMA Agent infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-linux-syslog-from-azure-vms-via-ama-agent",
+    "vendor": "Microsoft",
+    "product": "Linux Syslog from Azure VMs via AMA Agent",
+    "category": "Infrastructure",
+    "base_ingestion": 0.3,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Linux Syslog from Azure VMs via AMA Agent infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "various-on-prem-linux-syslog",
+    "vendor": "Various",
+    "product": "On-Prem Linux Syslog",
+    "category": "Infrastructure",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "On-Prem Linux Syslog infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-sysmon-for-servers-sysmon-modular",
+    "vendor": "Microsoft",
+    "product": "Sysmon for Servers (sysmon-modular)",
+    "category": "Infrastructure",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Sysmon for Servers (sysmon-modular) infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "various-dns-server-logs",
+    "vendor": "Various",
+    "product": "DNS Server Logs",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "DNS Server Logs infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "various-kubernetes-aks-eks-gke",
+    "vendor": "Various",
+    "product": "Kubernetes (AKS/EKS/GKE)",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Kubernetes (AKS/EKS/GKE) infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "qualys-qualys-vmdr",
+    "vendor": "Qualys",
+    "product": "Qualys VMDR",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Qualys VMDR infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "tenable-tenable-io-nessus",
+    "vendor": "Tenable",
+    "product": "Tenable.io / Nessus",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Tenable.io / Nessus infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "vmware-vmware-vsphere-esxi",
+    "vendor": "VMware",
+    "product": "VMware vSphere / ESXi",
+    "category": "Infrastructure",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "VMware vSphere / ESXi infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "nozomi-networks-nozomi-networks",
+    "vendor": "Nozomi Networks",
+    "product": "Nozomi Networks",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Nozomi Networks infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "claroty-claroty-xdome",
+    "vendor": "Claroty",
+    "product": "Claroty xDome",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Claroty xDome infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "armis-armis",
+    "vendor": "Armis",
+    "product": "Armis",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Armis infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "apache-apache-http-server",
+    "vendor": "Apache",
+    "product": "Apache HTTP Server",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Apache HTTP Server infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "nginx-nginx",
+    "vendor": "NGINX",
+    "product": "NGINX",
+    "category": "Infrastructure",
+    "base_ingestion": 5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "NGINX infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "squid-squid-proxy",
+    "vendor": "Squid",
+    "product": "Squid Proxy",
+    "category": "Infrastructure",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Squid Proxy infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "postfix-postfix-mail-server",
+    "vendor": "Postfix",
+    "product": "Postfix Mail Server",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Postfix Mail Server infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-sql-database",
+    "vendor": "Microsoft",
+    "product": "Azure SQL Database",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Azure SQL Database infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "microsoft-azure-key-vault",
+    "vendor": "Microsoft",
+    "product": "Azure Key Vault",
+    "category": "Infrastructure",
+    "base_ingestion": 0.1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "analytics",
+    "description": "Azure Key Vault infrastructure and platform telemetry."
+  },
+  {
+    "id": "microsoft-iis-web-server",
+    "vendor": "Microsoft",
+    "product": "IIS Web Server",
+    "category": "Infrastructure",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "IIS Web Server infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cynerio-cynerio",
+    "vendor": "Cynerio",
+    "product": "Cynerio",
+    "category": "Infrastructure",
+    "base_ingestion": 3,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Cynerio infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "dragos-dragos-platform",
+    "vendor": "Dragos",
+    "product": "Dragos Platform",
+    "category": "Infrastructure",
+    "base_ingestion": 2,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Dragos Platform infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cohesity-cohesity-dataprotect",
+    "vendor": "Cohesity",
+    "product": "Cohesity DataProtect",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Cohesity DataProtect infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "commvault-commvault-securityiq",
+    "vendor": "Commvault",
+    "product": "Commvault SecurityIQ",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Commvault SecurityIQ infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "druva-druva-data-security",
+    "vendor": "Druva",
+    "product": "Druva Data Security",
+    "category": "Infrastructure",
+    "base_ingestion": 0.5,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Druva Data Security infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "cribl-cribl-stream",
+    "vendor": "Cribl",
+    "product": "Cribl Stream",
+    "category": "Infrastructure",
+    "base_ingestion": 1,
+    "supports_scaling": true,
+    "scaling_key": "servers",
+    "tier_type": "smart_split",
+    "description": "Cribl Stream infrastructure and platform telemetry.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "various-threat-intelligence-platforms",
+    "vendor": "Various",
+    "product": "Threat Intelligence Platforms",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Threat Intelligence Platforms intelligence feed ingestion."
+  },
+  {
+    "id": "vectra-vectra-ai",
+    "vendor": "Vectra",
+    "product": "Vectra AI",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Vectra AI intelligence feed ingestion."
+  },
+  {
+    "id": "rapid7-rapid7-insightvm",
+    "vendor": "Rapid7",
+    "product": "Rapid7 InsightVM",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.3,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Rapid7 InsightVM intelligence feed ingestion."
+  },
+  {
+    "id": "recorded-future-recorded-future",
+    "vendor": "Recorded Future",
+    "product": "Recorded Future",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Recorded Future intelligence feed ingestion."
+  },
+  {
+    "id": "anomali-anomali-threatstream",
+    "vendor": "Anomali",
+    "product": "Anomali ThreatStream",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Anomali ThreatStream intelligence feed ingestion."
+  },
+  {
+    "id": "crowdstrike-crowdstrike-falcon-intelligence",
+    "vendor": "CrowdStrike",
+    "product": "CrowdStrike Falcon Intelligence",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "CrowdStrike Falcon Intelligence intelligence feed ingestion."
+  },
+  {
+    "id": "bitsight-bitsight-security-ratings",
+    "vendor": "Bitsight",
+    "product": "Bitsight Security Ratings",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Bitsight Security Ratings intelligence feed ingestion."
+  },
+  {
+    "id": "greynoise-greynoise-threat-intelligence",
+    "vendor": "GreyNoise",
+    "product": "GreyNoise Threat Intelligence",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "GreyNoise Threat Intelligence intelligence feed ingestion."
+  },
+  {
+    "id": "cybersixgill-cybersixgill-darkfeed",
+    "vendor": "Cybersixgill",
+    "product": "Cybersixgill Darkfeed",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Cybersixgill Darkfeed intelligence feed ingestion."
+  },
+  {
+    "id": "digital-shadows-digital-shadows-searchlight",
+    "vendor": "Digital Shadows",
+    "product": "Digital Shadows SearchLight",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Digital Shadows SearchLight intelligence feed ingestion."
+  },
+  {
+    "id": "feedly-feedly-threat-intelligence",
+    "vendor": "Feedly",
+    "product": "Feedly Threat Intelligence",
+    "category": "Threat Intelligence",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Feedly Threat Intelligence intelligence feed ingestion."
+  },
+  {
+    "id": "gitlab-gitlab-audit-events",
+    "vendor": "GitLab",
+    "product": "GitLab Audit Events",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "GitLab Audit Events DevOps and CI/CD security events."
+  },
+  {
+    "id": "jenkins-jenkins-ci-cd",
+    "vendor": "Jenkins",
+    "product": "Jenkins CI/CD",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 0.5,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Jenkins CI/CD DevOps and CI/CD security events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  },
+  {
+    "id": "atlassian-bitbucket-audit-logs",
+    "vendor": "Atlassian",
+    "product": "Bitbucket Audit Logs",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Bitbucket Audit Logs DevOps and CI/CD security events."
+  },
+  {
+    "id": "atlassian-jira-audit-logs",
+    "vendor": "Atlassian",
+    "product": "Jira Audit Logs",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 0.1,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "Jira Audit Logs DevOps and CI/CD security events."
+  },
+  {
+    "id": "github-github-enterprise-audit-log",
+    "vendor": "GitHub",
+    "product": "GitHub Enterprise Audit Log",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 0.2,
+    "supports_scaling": false,
+    "tier_type": "analytics",
+    "description": "GitHub Enterprise Audit Log DevOps and CI/CD security events."
+  },
+  {
+    "id": "snyk-snyk",
+    "vendor": "Snyk",
+    "product": "Snyk",
+    "category": "DevOps & CI/CD",
+    "base_ingestion": 2,
+    "supports_scaling": false,
+    "tier_type": "smart_split",
+    "description": "Snyk DevOps and CI/CD security events.",
+    "split": {
+      "analytics": 0.6,
+      "basic": 0.35,
+      "datalake": 0.05
+    }
+  }
+]

@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Space Grotesk', Sora, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #040914;
+  color: #f8fafc;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.32);
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.flow-path {
+  stroke: rgba(34, 211, 238, 0.5);
+  stroke-width: 2.5;
+  stroke-dasharray: 8 8;
+  animation: flow-dash 1.4s linear infinite;
+}
+
+.flow-dot {
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.85));
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
