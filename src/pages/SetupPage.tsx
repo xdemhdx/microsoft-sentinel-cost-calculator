@@ -50,21 +50,21 @@ export function SetupPage() {
           <p className="mt-1 text-xs text-slate-400">Model users, devices, and baseline environment variables.</p>
         </CardHeader>
         <CardContent className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          <label className="space-y-1 text-xs text-slate-400">
+          <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
             Number of Users
             <Input type="number" value={setup.users} onChange={(e) => setSetupValue('users', Number(e.target.value))} />
           </label>
-          <label className="space-y-1 text-xs text-slate-400">
+          <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
             Number of Endpoints
             <Input type="number" value={setup.endpoints} onChange={(e) => setSetupValue('endpoints', Number(e.target.value))} />
           </label>
-          <label className="space-y-1 text-xs text-slate-400">
+          <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
             Industry
             <Select value={setup.industry} onChange={(e) => setSetupValue('industry', e.target.value)}>
               <option value=''>Select industry</option>{industries.map((industry) => <option key={industry}>{industry}</option>)}
             </Select>
           </label>
-          <label className="space-y-1 text-xs text-slate-400">
+          <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
             Data Lake Queries / day
             <Input type="number" value={setup.queriesPerDay} onChange={(e) => setSetupValue('queriesPerDay', Number(e.target.value))} />
           </label>
@@ -76,18 +76,18 @@ export function SetupPage() {
           <CardHeader className="pb-3"><CardTitle>Retention and Pricing</CardTitle></CardHeader>
           <CardContent className="space-y-3">
             <div className="grid gap-3 md:grid-cols-3">
-              <label className="space-y-1 text-xs text-slate-400">Analytics retention (months)<Input type="number" value={setup.analyticsRetentionMonths} onChange={(e) => setSetupValue('analyticsRetentionMonths', Number(e.target.value))} /></label>
-              <label className="space-y-1 text-xs text-slate-400">Data Lake retention (months)<Input type="number" value={setup.dataLakeRetentionMonths} onChange={(e) => setSetupValue('dataLakeRetentionMonths', Number(e.target.value))} /></label>
-              <label className="space-y-1 text-xs text-slate-400">Basic retention (days)<Input type="number" value={setup.basicRetentionDays} onChange={(e) => setSetupValue('basicRetentionDays', Number(e.target.value))} /></label>
+              <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">Analytics retention (months)<Input type="number" value={setup.analyticsRetentionMonths} onChange={(e) => setSetupValue('analyticsRetentionMonths', Number(e.target.value))} /></label>
+              <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">Data Lake retention (months)<Input type="number" value={setup.dataLakeRetentionMonths} onChange={(e) => setSetupValue('dataLakeRetentionMonths', Number(e.target.value))} /></label>
+              <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">Basic retention (days)<Input type="number" value={setup.basicRetentionDays} onChange={(e) => setSetupValue('basicRetentionDays', Number(e.target.value))} /></label>
             </div>
             <div className="grid gap-3 md:grid-cols-2">
-              <label className="space-y-1 text-xs text-slate-400">
+              <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
                 Azure Region Pricing
                 <Select value={selectedRegionKey} onChange={(e) => setSetupValue('region', e.target.value)}>
                   <option value=''>Select region</option>{sentinelRegionOptions.map((region) => <option key={region.value} value={region.value}>{region.analyticsPaygPerGb ? `${region.label} ($${region.analyticsPaygPerGb.toFixed(2)}/GB PAYG)` : `${region.label} (commitment pricing only)`}</option>)}
                 </Select>
               </label>
-              <label className="space-y-1 text-xs text-slate-400">
+              <label className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
                 Commitment Tier
                 <Select value={selectedCommitmentTier} onChange={(e) => setSetupValue('commitmentTier', e.target.value)}>
                   <option value=''>Select commitment tier</option>{sentinelCommitmentOptions.map((tier) => {
@@ -114,22 +114,22 @@ export function SetupPage() {
         <Card>
           <CardHeader className="pb-3"><CardTitle>Data Grants</CardTitle></CardHeader>
           <CardContent className="space-y-3">
-            <div className="flex items-center justify-between rounded-xl border border-red-500/35 bg-red-500/10 px-3 py-2">
+            <div className="flex items-center justify-between rounded-lg border border-nox-accent/25 bg-nox-accent/[0.05] px-3.5 py-3">
               <div>
-                <p className="text-sm text-white">Microsoft 365 E5 Security Data Grant</p>
-                <p className="text-xs text-slate-400">5MB per user/day free ingestion</p>
+                <p className="text-sm font-medium text-nox-text">Microsoft 365 E5 Security Data Grant</p>
+                <p className="font-mono text-[11px] text-nox-faint">5MB per user/day free ingestion</p>
               </div>
               <Switch checked={setup.e5GrantEnabled} onCheckedChange={(v) => setSetupValue('e5GrantEnabled', Boolean(v))} />
             </div>
-            <div className="flex items-center justify-between rounded-xl border border-red-500/25 bg-slate-950/70 px-3 py-2">
+            <div className="flex items-center justify-between rounded-lg border border-white/[0.08] bg-nox-panel px-3.5 py-3">
               <div>
-                <p className="text-sm text-white">Defender for Servers Plan 2</p>
-                <p className="text-xs text-slate-400">500MB per server/day free ingestion</p>
+                <p className="text-sm font-medium text-nox-text">Defender for Servers Plan 2</p>
+                <p className="font-mono text-[11px] text-nox-faint">500MB per server/day free ingestion</p>
               </div>
               <Switch checked={setup.defenderServersGrantEnabled} onCheckedChange={(v) => setSetupValue('defenderServersGrantEnabled', Boolean(v))} />
             </div>
-            <div className="rounded-xl border border-slate-700 bg-slate-950/50 px-3 py-2 text-sm text-slate-300">
-              Free ingestion applied: <span className="font-semibold text-red-300">{summary.freeGrantDailyGb.toFixed(2)} GB/day</span>
+            <div className="rounded-lg border border-white/[0.08] bg-nox-panel px-3.5 py-3 text-sm text-nox-muted">
+              Free ingestion applied: <span className="font-mono font-medium text-nox-accent">{summary.freeGrantDailyGb.toFixed(2)} GB/day</span>
             </div>
           </CardContent>
         </Card>
@@ -139,7 +139,7 @@ export function SetupPage() {
         <CardHeader className="pb-3"><CardTitle>Infrastructure Workloads</CardTitle></CardHeader>
         <CardContent className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {infraFields.map(([key, label]) => (
-            <label key={key} className="space-y-1 text-xs text-slate-400">
+            <label key={key} className="flex flex-col gap-1.5 text-xs font-medium text-nox-muted">
               {label}
               <Input type="number" value={setup[key]} onChange={(e) => setSetupValue(key, Number(e.target.value))} />
             </label>
@@ -152,9 +152,9 @@ export function SetupPage() {
       <Card>
         <CardHeader className="pb-3"><CardTitle>Recommended Log Sources</CardTitle></CardHeader>
         <CardContent className="space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-700 bg-slate-950/60 p-3">
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-white/[0.08] bg-nox-panel p-3.5">
             <p className="text-sm text-slate-300">Enable suggested connectors from selected compliance frameworks.</p>
-            <Button variant="outline" onClick={applyCompliance}>Apply Recommendations</Button>
+            <Button onClick={applyCompliance}>Apply Recommendations</Button>
           </div>
           <p className="text-xs text-slate-400">
             Snapshot: {Object.values(selections).filter((s) => s.selected).length} sources selected, {summary.dailyIngestion.toFixed(2)} GB/day ingestion.

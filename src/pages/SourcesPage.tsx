@@ -90,10 +90,10 @@ export function SourcesPage() {
                   key={item}
                   onClick={() => setCategory(item)}
                   className={cn(
-                    'rounded-lg border px-2.5 py-1 text-xs transition',
+                    'rounded-md border px-2.5 py-1 font-mono text-[11px] transition',
                     item === category
-                      ? 'border-red-400/70 bg-red-500/15 text-red-200'
-                      : 'border-slate-700 bg-slate-950/50 text-slate-400 hover:border-slate-500',
+                      ? 'border-nox-accent/40 bg-nox-accent/10 text-nox-accent'
+                      : 'border-white/[0.08] bg-nox-surface-2 text-nox-muted hover:border-white/[0.14] hover:text-nox-text',
                   )}
                 >
                   {item} ({count})
@@ -104,7 +104,7 @@ export function SourcesPage() {
         </CardContent>
       </Card>
 
-      <div ref={parentRef} className="h-[72vh] overflow-auto rounded-2xl border border-slate-800 bg-slate-900/35 p-3">
+      <div ref={parentRef} className="h-[72vh] overflow-auto rounded-[14px] border border-white/[0.08] bg-nox-bg/60 p-2">
         <div style={{ height: `${rowVirtualizer.getTotalSize()}px`, position: 'relative' }}>
           {rowVirtualizer.getVirtualItems().map((virtualRow) => {
             const rowItems = filtered.slice(virtualRow.index * columns, virtualRow.index * columns + columns);

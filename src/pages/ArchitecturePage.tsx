@@ -38,8 +38,8 @@ export function ArchitecturePage() {
         <CardContent className="space-y-3">
           {selected.length === 0 ? <p className="text-sm text-slate-400">Select sources in the Sources tab to configure routing.</p> : null}
           {selected.map(({ source, split }) => (
-            <div key={source.id} className="space-y-2 rounded-xl border border-slate-700 bg-slate-950/70 p-3">
-              <p className="text-sm text-slate-100">{source.vendor} {source.product}</p>
+            <div key={source.id} className="space-y-2 rounded-lg border border-white/[0.08] bg-nox-panel p-3.5">
+              <p className="text-sm font-medium text-nox-text">{source.vendor} {source.product}</p>
               <TierSelector
                 split={split}
                 onChange={(tier, value) => setSourceTier(source.id, tier, value)}

@@ -2,6 +2,13 @@ import type { HTMLAttributes } from 'react';
 import { cn } from '../../lib/utils';
 
 export function Badge({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
-  return <span className={cn('inline-flex items-center rounded-full border border-red-400/30 bg-red-500/10 px-2 py-0.5 text-[11px] font-medium text-red-300', className)} {...props} />;
+  return (
+    <span
+      className={cn(
+        'inline-flex items-center rounded-md border border-white/[0.08] bg-nox-surface-2 px-2 py-0.5 font-mono text-[11px] font-medium text-nox-muted',
+        className,
+      )}
+      {...props}
+    />
+  );
 }
-

@@ -12,8 +12,8 @@ export function ChangelogPage() {
       <CardHeader><CardTitle>Changelog</CardTitle></CardHeader>
       <CardContent className="space-y-3">
         {items.map((item) => (
-          <div key={item.title} className="rounded-xl border border-slate-700 bg-slate-950/60 p-3">
-            <p className="text-xs text-red-300">{item.date}</p>
+          <div key={item.title} className="rounded-lg border border-white/[0.08] bg-nox-panel p-3.5">
+            <p className="font-mono text-[11px] text-nox-accent">{item.date}</p>
             <p className="text-sm font-medium text-slate-100">{item.title}</p>
             <p className="text-sm text-slate-300">{item.text}</p>
           </div>

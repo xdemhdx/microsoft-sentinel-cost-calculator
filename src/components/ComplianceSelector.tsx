@@ -26,10 +26,10 @@ export function ComplianceSelector() {
             <button
               key={item}
               className={cn(
-                'rounded-xl border px-3 py-2 text-left text-sm transition',
+                'flex items-center justify-between rounded-lg border px-3.5 py-2.5 text-left font-mono text-[13px] transition',
                 selected.includes(item)
-                  ? 'border-red-400/70 bg-red-500/10 text-red-200'
-                  : 'border-slate-700 bg-slate-950/40 text-slate-300 hover:border-slate-500',
+                  ? 'border-nox-accent/40 bg-nox-accent/[0.08] text-nox-accent'
+                  : 'border-white/[0.08] bg-nox-panel text-nox-muted hover:border-white/[0.14] hover:text-nox-text',
               )}
               onClick={() => toggle(item)}
             >

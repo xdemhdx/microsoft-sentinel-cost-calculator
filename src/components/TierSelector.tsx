@@ -10,9 +10,9 @@ interface TierSelectorProps {
 
 const tiers: Tier[] = ['analytics', 'basic', 'datalake'];
 const tierMeta = {
-  analytics: { label: 'Analytics', accent: 'text-amber-200', chip: 'bg-amber-500/10 text-amber-200' },
-  basic: { label: 'Basic', accent: 'text-indigo-200', chip: 'bg-indigo-500/10 text-indigo-200' },
-  datalake: { label: 'Data Lake', accent: 'text-emerald-200', chip: 'bg-emerald-500/10 text-emerald-200' },
+  analytics: { label: 'Analytics', accent: 'text-amber-300', chip: 'bg-amber-500/10 text-amber-200' },
+  basic: { label: 'Basic', accent: 'text-indigo-300', chip: 'bg-indigo-500/10 text-indigo-200' },
+  datalake: { label: 'Data Lake', accent: 'text-violet-300', chip: 'bg-violet-500/10 text-violet-200' },
 } as const;
 
 export function TierSelector({ split, onChange, onPreset }: TierSelectorProps) {
@@ -37,7 +37,7 @@ export function TierSelector({ split, onChange, onPreset }: TierSelectorProps) {
 
       <div className="grid gap-2 sm:grid-cols-3">
         {tiers.map((tier) => (
-          <label key={tier} className="rounded-xl border border-white/8 bg-white/[0.03] p-2">
+          <label key={tier} className="rounded-lg border border-white/[0.08] bg-nox-panel p-2.5">
             <div className="mb-1.5 flex items-center justify-between text-xs text-slate-400">
               <span className={tierMeta[tier].accent}>{tierMeta[tier].label}</span>
               <span className={`rounded-full px-2 py-0.5 text-[10px] ${tierMeta[tier].chip}`}>{Math.round(split[tier] * 100)}%</span>

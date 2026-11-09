@@ -36,11 +36,11 @@ export function ScenarioComparison() {
             const delta = summary.discountedMonthlyCost - scenarioSummary.discountedMonthlyCost;
 
             return (
-              <div key={scenario.id} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-700 bg-slate-950/70 px-3 py-2">
+              <div key={scenario.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-white/[0.08] bg-nox-panel px-3.5 py-2.5">
                 <div>
                   <p className="text-sm font-medium text-slate-100">{scenario.name}</p>
                   <p className="text-xs text-slate-400">
-                    {formatCurrency(scenarioSummary.discountedMonthlyCost)} • saved {formatDistanceToNowStrict(scenario.savedAt)} ago
+                    {formatCurrency(scenarioSummary.discountedMonthlyCost)} Â· saved {formatDistanceToNowStrict(scenario.savedAt)} ago
                   </p>
                   <p className={`text-xs ${delta <= 0 ? 'text-emerald-300' : 'text-amber-300'}`}>
                     vs active: {delta <= 0 ? 'Save' : 'Add'} {formatCurrency(Math.abs(delta))}/month

@@ -5,7 +5,7 @@ export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElem
   return (
     <input
       className={cn(
-        'h-11 w-full rounded-2xl border border-white/10 bg-white/6 px-4 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-300/55 focus:bg-white/8',
+        'h-10 w-full rounded-lg border border-white/[0.1] bg-nox-panel px-3.5 text-sm text-nox-text outline-none transition placeholder:text-nox-faint hover:border-white/[0.16] focus:border-nox-accent/60 focus:ring-2 focus:ring-nox-accent/15 [&[type=number]]:font-mono',
         className,
       )}
       {...props}

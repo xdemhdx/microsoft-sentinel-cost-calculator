@@ -9,9 +9,9 @@ interface ArchitectureDiagramProps {
 }
 
 const tierMeta = {
-  analytics: { label: 'Analytics Tier', price: '$4.30/GB', color: 'text-amber-300', border: 'border-amber-500/25', bg: 'bg-amber-500/8' },
-  datalake: { label: 'Data Lake (Auxiliary)', price: '$0.15/GB', color: 'text-emerald-300', border: 'border-emerald-500/25', bg: 'bg-emerald-500/8' },
-  basic: { label: 'Basic Logs', price: '$1.00/GB', color: 'text-indigo-300', border: 'border-indigo-500/25', bg: 'bg-indigo-500/8' },
+  analytics: { label: 'Analytics Tier', price: '$4.30/GB', color: 'text-amber-300', border: 'border-amber-500/25', bg: 'bg-amber-500/[0.06]', bar: 'bg-nox-warn' },
+  datalake: { label: 'Data Lake (Auxiliary)', price: '$0.15/GB', color: 'text-violet-300', border: 'border-violet-500/25', bg: 'bg-violet-500/[0.06]', bar: 'bg-nox-lilac' },
+  basic: { label: 'Basic Logs', price: '$1.00/GB', color: 'text-indigo-300', border: 'border-indigo-500/25', bg: 'bg-indigo-500/[0.06]', bar: 'bg-nox-blue' },
 } as const;
 
 export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramProps) {
@@ -38,33 +38,33 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <div className="flex items-center gap-3">
-          <div className="rounded-xl bg-gradient-to-br from-red-500 to-rose-600 p-3 shadow-[0_0_30px_-10px_rgba(239,68,68,0.9)]">
-            <Funnel className="h-5 w-5 text-white" />
+          <div className="grid h-10 w-10 place-items-center rounded-[10px] border border-nox-accent/25 bg-nox-accent/10">
+            <Funnel className="h-[18px] w-[18px] text-nox-accent" />
           </div>
           <div>
-            <CardTitle className="text-2xl">Sentinel Data Architecture</CardTitle>
-            <p className="text-sm text-slate-400">{summary.dailyIngestion.toFixed(2)} GB/day across {selected.length} sources</p>
+            <CardTitle className="text-xl tracking-[-0.02em]">Sentinel Data Architecture</CardTitle>
+            <p className="font-mono text-xs text-nox-muted">{summary.dailyIngestion.toFixed(2)} GB/day across {selected.length} sources</p>
           </div>
         </div>
       </CardHeader>
 
       <CardContent className="space-y-4">
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
+          <div className="rounded-xl border border-amber-500/30 bg-amber-500/[0.07] p-4">
             <p className="text-sm text-amber-300">Analytics Tier</p>
-            <p className="text-3xl font-semibold text-amber-200">{tierTotals.analytics.toFixed(2)} <span className="text-base">GB/day</span></p>
+            <p className="text-3xl font-semibold tabular-nums tracking-[-0.03em] text-amber-200">{tierTotals.analytics.toFixed(2)} <span className="font-mono text-xs font-medium tracking-normal opacity-70">GB/day</span></p>
           </div>
-          <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-            <p className="text-sm text-emerald-300">Data Lake</p>
-            <p className="text-3xl font-semibold text-emerald-200">{tierTotals.datalake.toFixed(2)} <span className="text-base">GB/day</span></p>
+          <div className="rounded-xl border border-violet-500/30 bg-violet-500/[0.07] p-4">
+            <p className="text-sm text-violet-300">Data Lake</p>
+            <p className="text-3xl font-semibold tabular-nums tracking-[-0.03em] text-violet-200">{tierTotals.datalake.toFixed(2)} <span className="font-mono text-xs font-medium tracking-normal opacity-70">GB/day</span></p>
           </div>
-          <div className="rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-4">
+          <div className="rounded-xl border border-indigo-500/30 bg-indigo-500/[0.07] p-4">
             <p className="text-sm text-indigo-300">Basic Logs</p>
-            <p className="text-3xl font-semibold text-indigo-200">{tierTotals.basic.toFixed(2)} <span className="text-base">GB/day</span></p>
+            <p className="text-3xl font-semibold tabular-nums tracking-[-0.03em] text-indigo-200">{tierTotals.basic.toFixed(2)} <span className="font-mono text-xs font-medium tracking-normal opacity-70">GB/day</span></p>
           </div>
-          <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4">
+          <div className="rounded-xl border border-red-500/30 bg-red-500/[0.07] p-4">
             <p className="text-sm text-red-300">FREE Ingestion</p>
-            <p className="text-3xl font-semibold text-red-200">{summary.freeGrantDailyGb.toFixed(2)} <span className="text-base">GB/day</span></p>
+            <p className="text-3xl font-semibold tabular-nums tracking-[-0.03em] text-red-200">{summary.freeGrantDailyGb.toFixed(2)} <span className="font-mono text-xs font-medium tracking-normal opacity-70">GB/day</span></p>
           </div>
         </div>
 
@@ -85,11 +85,11 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
               onScroll={(e) => setSourceScrollTop(e.currentTarget.scrollTop)}
             >
             {selected.map((item) => (
-              <div key={item.source.id} className="rounded-xl border border-slate-700 bg-slate-900/80 px-3 py-2">
+              <div key={item.source.id} className="rounded-lg border border-white/[0.08] bg-nox-panel px-3 py-2">
                 <p className="truncate text-sm font-medium text-slate-100">{item.source.product}</p>
                 <p className="text-xs text-slate-400">{item.source.base_ingestion.toFixed(2)} GB/day</p>
                 <div className="mt-2 h-1 rounded bg-slate-800">
-                  <div className="h-1 rounded bg-amber-400" style={{ width: `${Math.min(100, item.source.base_ingestion * 20)}%` }} />
+                  <div className="h-1 rounded bg-nox-accent" style={{ width: `${Math.min(100, item.source.base_ingestion * 20)}%` }} />
                 </div>
               </div>
             ))}
@@ -97,14 +97,14 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
           </div>
 
           <div className="relative flex items-center justify-center py-2">
-            <div className="w-full rounded-2xl border border-red-500/20 bg-gradient-to-b from-red-500/5 to-slate-900/10 p-6" style={{ minHeight: `${sourcePanelHeight}px` }}>
-              <div className="relative z-20 mx-auto mt-24 w-48 rounded-2xl border border-red-400/35 bg-gradient-to-b from-red-500/25 to-red-900/20 p-4 text-center shadow-[0_0_40px_-16px_rgba(239,68,68,0.8)]">
-                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-400 to-rose-600">
-                  <Funnel className="h-6 w-6 text-white" />
+            <div className="w-full rounded-xl border border-dashed border-white/[0.1] bg-[radial-gradient(circle_at_50%_50%,rgba(61,255,162,0.06),transparent_60%)] p-6" style={{ minHeight: `${sourcePanelHeight}px` }}>
+              <div className="relative z-20 mx-auto mt-24 w-48 rounded-xl border border-nox-accent/35 bg-nox-surface p-4 text-center shadow-[0_0_0_1px_rgba(61,255,162,0.06),0_0_60px_-20px_rgba(61,255,162,0.55)]">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-[10px] bg-nox-accent">
+                  <Funnel className="h-6 w-6 text-nox-ink" />
                 </div>
-                <p className="text-xl font-semibold text-white">DCR</p>
-                <p className="text-lg font-semibold text-white">Transformation</p>
-                <p className="mt-1 text-xs text-slate-300">Data Collection Rules</p>
+                <p className="font-mono text-xs text-nox-accent">DCR</p>
+                <p className="text-lg font-semibold tracking-[-0.01em] text-nox-text">Transformation</p>
+                <p className="mt-1 text-xs text-nox-muted">Data Collection Rules</p>
               </div>
             </div>
 
@@ -119,7 +119,7 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
                       d={`M 0 ${y} C 56 ${y}, 62 ${endY}, ${endX} ${endY}`}
                       className="flow-path"
                     />
-                    <circle r="3" fill="#f87171" className="flow-dot">
+                    <circle r="3" fill="#3dffa2" className="flow-dot">
                       <animateMotion dur="2.5s" repeatCount="indefinite" rotate="auto" path={`M 0 ${y} C 56 ${y}, 62 ${endY}, ${endX} ${endY}`} />
                     </circle>
                   </g>
@@ -136,8 +136,8 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
                   <p className={`text-lg font-semibold ${tierMeta[tier].color}`}>{tierMeta[tier].label}</p>
                   <p className={`text-xl font-semibold ${tierMeta[tier].color}`}>{tierTotals[tier].toFixed(2)} <span className="text-sm">GB/day</span></p>
                 </div>
-                <div className="mb-2 h-2 rounded-full bg-slate-800">
-                  <div className="h-2 rounded-full bg-gradient-to-r from-red-500 to-rose-500" style={{ width: `${summary.dailyIngestion ? Math.min(100, (tierTotals[tier] / summary.dailyIngestion) * 100) : 0}%` }} />
+                <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+                  <div className={`h-1.5 rounded-full ${tierMeta[tier].bar}`} style={{ width: `${summary.dailyIngestion ? Math.min(100, (tierTotals[tier] / summary.dailyIngestion) * 100) : 0}%` }} />
                 </div>
                 <div className="flex items-center justify-between text-xs text-slate-400">
                   <span>{tierMeta[tier].price}</span>
@@ -146,8 +146,8 @@ export function ArchitectureDiagram({ selected, summary }: ArchitectureDiagramPr
               </div>
             ))}
 
-            <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-3 text-xs text-slate-400">
-              <div className="mb-2 flex items-center gap-2 text-slate-300"><ShieldAlert className="h-4 w-4 text-red-300" />Routing Notes</div>
+            <div className="rounded-lg border border-white/[0.08] bg-nox-panel p-3 text-xs text-nox-muted">
+              <div className="mb-2 flex items-center gap-2 text-slate-300"><ShieldAlert className="h-4 w-4 text-nox-accent" />Routing Notes</div>
               <p>Adjust source splits below to simulate DCR transformations and optimize ingestion cost across tiers.</p>
             </div>
           </div>
